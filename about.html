@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>barba</title>
+  </head>
+  <body data-barba="wrapper">
+    <div class="transition"></div>
+    <div class="nav-container">
+      <div class="logo-img_wrapper">
+        <a href="./index.html"
+          ><img src="./logo.svg" alt="オールウェイズ通訳サービス"
+        /></a>
+      </div>
+      <div class="nav-container_right">
+        <nav class="primary-nav">
+          <ul class="primary-nav_ul" role="list">
+            <li class="primary_about">
+              <a class="fs-16 bold primary_link" href="./about.html"
+                >私たちについて</a
+              >
+            </li>
+            <li class="primary_price">
+              <a class="fs-16 bold primary_link" href="./price.html"
+                >基本料金</a
+              >
+            </li>
+            <li class="primary_notice">
+              <a class="fs-16 bold primary_link" href="./notice.html"
+                >お知らせ</a
+              >
+            </li>
+            <li class="primary_blog">
+              <a class="fs-16 bold primary_link" href="./blog.html">ブログ</a>
+            </li>
+            <li class="primary_recruit">
+              <a class="fs-16 bold primary_link" href="./recruit.html"
+                >通訳募集</a
+              >
+            </li>
+            <li class="primary_contact">
+              <div class="primary_contact-wrapper">
+                <img src="./contact.svg" alt="" />
+                <a class="fs-16 bold primary_link" href="./contact.html"
+                  >お問い合わせ</a
+                >
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="langauge-btn-container">
+          <button class="jp-btn active-lang lang-btn fs-12">日本語 /</button>
+          <button class="cn-btn lang-btn fs-12">中文</button>
+        </div>
+      </div>
+    </div>
+<main data-barba="container" data-barba-namespace="about" class="container">
+    <div class="content-top">
+        <h1>ABOUT</h1>
+        <div class="header-revealer"></div>
+    </div>
+    <div class="content-bottom">
+        <h2>Barba js practice About</h2>
+        <p>This is the dummby site made to practice barbajs </p>
+    </div>
+</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
