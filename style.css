@@ -290,6 +290,10 @@ main{
 .content-top{
     position: relative;
 }
+h1{
+    position: relative;
+    top: 64px;
+}
 
 .header-revealer{
     position: absolute;

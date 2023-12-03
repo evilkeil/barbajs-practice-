@@ -17,3 +17,23 @@ function pageTransition(){
     })
 
 }
+
+
+
+function contentAnimation(){
+    tl.to('h1',{
+        duration:1,
+        top:0,
+        ease:"power4.inOut",
+        delay:0.75,
+    })
+}
+
+function delay(n){
+    n = n||0;
+    return new Promise((done)=>{
+        setTimeout(()=>{
+            done();
+        },n);
+    });
+}
