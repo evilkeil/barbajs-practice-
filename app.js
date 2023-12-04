@@ -1,14 +1,17 @@
 function pageTransition(){
     let tl = gsap.timeline();
-
-    tl.to('.transition',{
+    return tl.to('.transition',{
         duration:1,
         scaleY:1,
         trasnformOrigin:'bottom',
         ease:"power4.inOut",
     })
 
-    tl.to('.transition',{
+}
+
+function temp(){
+    let tl = gsap.timeline();
+  return  tl.to('.transition',{
         duration:1,
         scaleY:0,
         trasnformOrigin:'top',
@@ -17,7 +20,6 @@ function pageTransition(){
     })
 
 }
-
 
 
 function contentAnimation(){
@@ -37,3 +39,22 @@ function delay(n){
         },n);
     });
 }
+
+barba.init({
+    sync:true,
+    transitions:[
+        {
+            async leave(data){
+                const done = this.async();
+                pageTransition();
+                // temp();
+                await delay(1000);
+                done();
+            },
+            async enter(data){
+                temp();
+                //  contentAnimation();
+            }
+        }
+    ]
+})
