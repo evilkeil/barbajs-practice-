@@ -333,3 +333,106 @@ h1{
   z-index: 10;
   pointer-events: none;
 }
+
+.button-one {
+  background: transparent;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* .button-one {
+  --button-color: #333;
+} */
+
+.button-one .line {
+  transition: y 300ms ease-in 300ms, rotate 300ms ease-in, opacity 0ms 300ms;
+  transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+  transition: y 300ms ease-in, rotate 300ms ease-in 300ms, opacity 0ms 300ms;
+}
+
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
+  y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
+/* carosel */
+
+#carousel-container {
+	width: 500px;
+	height: 332px;
+	position: relative;
+	margin: 50px auto 0;
+  border: 10px solid #000;
+  border-radius: 10px;
+}
+
+#carousel-container > div:first-child {
+	overflow: hidden;
+	max-width: 100%;
+	margin: 0;
+}
+
+#carousel {
+	position: relative;
+	width: 5000px;
+	height: 332px;
+  padding: 0;
+  margin: 0;
+}
+
+.animate{
+	-webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
+
+.slide {
+  list-style: none;
+	position: relative;
+	float: left;
+	transform: translateX(-500px)
+}
+
+#controls{
+	position: absolute;
+  width: 620px;
+	top: calc( 50% - 25px);
+	margin: 0 -60px;
+}
+
+#controls span {
+	width: 50px;
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+#controls span:hover {
+	opacity: 1;
+}
+
+#prev {
+	float: left;
+}
+
+#next {
+	float: right;
+}
