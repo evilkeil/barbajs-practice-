@@ -97,6 +97,8 @@ function updateText(n){
       h2.style.color = 'blue';
     }else if(n === 2){
       h2.style.color = 'red';
+    }else{
+      h2.style.color = 'black';
     }
 }
 
