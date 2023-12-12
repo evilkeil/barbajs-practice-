@@ -61,10 +61,12 @@
 
 
 const checkboxes = document.querySelectorAll('.option');
-const span = document.getElementById('number');
-const h2 = document.getElementById('result');
+const checked = document.getElementById('number');
+const resultOutput= document.getElementById('result');
 let selected = 0;
 
+const modal = document.getElementById("modal");
+const closeModalBtn = document.querySelector("#close-btn");
 
 const resultList = {
   0:"現在薄毛の可能性は低いですが、症状が出る前に予防治療を行うこともできます。",
@@ -72,8 +74,28 @@ const resultList = {
   2:"女性の薄毛である可能性が高いので、毛根が死滅する前に薄毛治療を行うことが大切です。"
 }
 
-console.log(resultList[1])
 
+function openModal(){
+  modal.showModal();
+}
+function closeModal(){
+  modal.close();
+}
+function runOnLoad(){
+  openModal();
+closemodalEventListner();
+}
+function closemodalEventListner(){
+  closeModalBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    closeModal()
+  })
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  setTimeout(runOnLoad,30000);
+
+});
 
 
 function addSelection(){
@@ -86,19 +108,19 @@ function removeSelection(){
 }
 
 function clearText(){
-    span.textContent = "";
+    checked.textContent = "";
     result.textContent=""
 
 }
 function updateText(n){
-    span.textContent =`${selected}`;
-    h2.textContent =`${resultList[n]}`;
+    checked.textContent =`${selected}`;
+    resultOutput.textContent =`${resultList[n]}`;
     if(n === 1){
-      h2.style.color = 'blue';
+      resultOutput.style.color = 'blue';
     }else if(n === 2){
-      h2.style.color = 'red';
+      resultOutput.style.color = 'red';
     }else{
-      h2.style.color = 'black';
+      resultOutput.style.color = 'black';
     }
 }
 
@@ -121,14 +143,12 @@ checkboxes.forEach(checkbox => {
             const result = determineResult(selected);
             clearText()
             updateText(result)
-            console.log(selected)
         }
         else{
             removeSelection()
             const result = determineResult(selected);
             clearText()
             updateText(result)
-            console.log(selected)
         }
     })
 })

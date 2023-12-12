@@ -60,7 +60,7 @@
       </div>
     </div>
 <main data-barba="container" data-barba-namespace="home" class="container">
-    <div class="content-top">
+    <!-- <div class="content-top">
        <label for=""><input type="checkbox" name="" id="option-1" class="option"></label>
        <label for=""><input type="checkbox" name="" id="option-2" class="option"></label>
        <label for=""><input type="checkbox" name="" id="option-3" class="option"></label>
@@ -75,7 +75,25 @@
         <p><span id="number">0</span>件　選んでます</p>
 
         <h2 id="result">現在薄毛の可能性は低いですが、症状が出る前に予防治療を行うこともできます。</h2>
-    </div>
+    </div> -->
+    <dialog class="modal" id="modal">
+      <button id="close-btn">X</button>
+      <h2> 抜け毛・薄毛チェックリスト</h2>
+      <form id="evaluation">
+        <div class="checklist">
+          <label for=""><input type="checkbox" name="" id="option-1" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-2" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-3" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-4" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-5" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-6" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-7" class="option"></label>
+          <label for=""><input type="checkbox" name="" id="option-8" class="option"></label>
+        </div>
+        <p><span id="number">0</span>件　選んでます</p>
+      </form>
+      <h3 id="result">現在薄毛の可能性は低いですが、症状が出る前に予防治療を行うこともできます。</h3>
+  </dialog>
 </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
